@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>업무 가이드 포털</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="layout-page">
+    <header class="site-header">
+      <div class="site-header-inner">
+        <div class="site-title">고주무관의 교직원을 위한 행정업무 안내 사이트</div>
+        <nav class="site-nav">
+          <a href="/">홈</a>
+          <a href="/docs-portal.html" class="is-active">업무 가이드</a>
+          <a href="/faq.html">자주 묻는 질문</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="page-wrap">
+        <h1 class="page-title" id="docsPageTitle">업무 백과사전</h1>
+        <p class="page-subtitle" id="docsPageSubtitle"></p>
+
+        <div class="docs-layout">
+          <!-- ✅ 사이드바/본문은 JSON 렌더링 -->
+          <aside class="docs-sidebar" id="docsSidebar"></aside>
+          <div class="docs-content" id="docsContent"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner" data-global-footer></div>
+    </footer>
+  </div>
+
+  <button id="scrollTopBtn" aria-label="위로 가기">↑</button>
+  <script src="/static/site-common.js"></script>
+  <script src="/static/site.js"></script>
+  <script src="/static/render-docs-portal.js"></script>
+</body>
+</html>

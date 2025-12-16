@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>고주무관의 교직원용 업무보조 웹사이트 (비공식)</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="layout-page">
+    <header class="site-header">
+      <div class="site-header-inner">
+        <div class="site-title">고주무관의 교직원을 위한 행정업무 안내 사이트</div>
+        <nav class="site-nav">
+          <a href="/" class="is-active">홈</a>
+          <a href="/docs-portal.html">업무 가이드</a>
+          <a href="/faq.html">자주 묻는 질문</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="page-wrap">
+        <h1 class="page-title">궁금하신 내용을 선택해주세요.</h1>
+        <p class="page-subtitle">귀여운 고주무관이 교직원분들을 위해 만들어둔 행정업무 백과사전입니다.</p>
+
+        <div class="home-filter">
+          <button type="button" class="filter-btn is-active" data-filter="all">전체</button>
+          <button type="button" class="filter-btn" data-filter="leave">복무</button>
+          <button type="button" class="filter-btn" data-filter="contract">계약</button>
+          <button type="button" class="filter-btn" data-filter="travel">여비</button>
+          <button type="button" class="filter-btn" data-filter="faq">FAQ</button>
+          <button type="button" class="filter-btn" data-filter="qa">단일업무</button>
+        </div>
+
+        <!-- ✅ 카드 목록은 JS가 자동 생성 -->
+        <div class="home-grid" id="homeGrid"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner" data-global-footer></div>
+    </footer>
+  </div>
+
+  <button id="scrollTopBtn" aria-label="위로 가기">↑</button>
+
+  <script src="/static/site-common.js"></script>
+  <script src="/static/site.js"></script>
+  <script src="/static/render-home.js"></script>
+</body>
+</html>

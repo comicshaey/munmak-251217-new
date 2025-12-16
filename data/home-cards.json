@@ -1,0 +1,50 @@
+[
+  {
+    "tag": "복무·근무상황",
+    "title": "교육공무직 등 복무 관련 안내",
+    "desc": "재량휴업일 복무 신청 유형, 초과근무 증빙 등 복무와 관련된 행정업무를 정리했습니다.",
+    "footer": "복무 신청 · 초과근무",
+    "category": "leave",
+    "href": "/docs-portal.html#section-bokmu"
+  },
+  {
+    "tag": "계약·인사",
+    "title": "늘봄학교 강사·대체인력 계약 안내",
+    "desc": "채용 시 구비서류, 계약서(안) 확인사항 등 계약 체결과 관련된 행정업무를 정리했습니다.",
+    "footer": "계약제교원 · 교육공무직 · 외부강사",
+    "category": "contract",
+    "href": "/docs-portal.html#section-gyeoyak"
+  },
+  {
+    "tag": "여비",
+    "title": "관내·관외 여비 안내",
+    "desc": "출장 신청부터 여비 정산서 작성까지 여비 관련 행정업무를 정리했습니다.",
+    "footer": "출장 구분 · 여비 정산",
+    "category": "travel",
+    "href": "/docs-portal.html#section-yeobi"
+  },
+  {
+    "tag": "단일 업무",
+    "title": "늘봄학교 외부강사 계약 업무",
+    "desc": "늘봄학교 외부강사 채용 및 위수탁 계약과 관련된 행정실 협의 사항을 정리한 문서입니다.",
+    "footer": "위수탁 계약 · 계약서 체크",
+    "category": "qa",
+    "href": "/question-and-answer/view.html#doc-a4-001"
+  },
+  {
+    "tag": "단일업무 상세",
+    "title": "늘봄학교 수익자부담금 업무",
+    "desc": "수익자부담금 징수, 강사료 지급, 정산 절차를 탭 구조로 정리했습니다.",
+    "footer": "징수 · 지급 · 정산",
+    "category": "qa",
+    "href": "/question-and-answer/view.html#tabs-001"
+  },
+  {
+    "tag": "FAQ",
+    "title": "자주 묻는 질문",
+    "desc": "반복적으로 문의되는 질문을 빠르게 확인할 수 있도록 정리했습니다.",
+    "footer": "질문/답변 모음",
+    "category": "faq",
+    "href": "/faq.html"
+  }
+]

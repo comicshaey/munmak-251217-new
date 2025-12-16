@@ -1,0 +1,62 @@
+{
+  "pageTitle": "업무 백과사전",
+  "pageSubtitle": "왼쪽 사이드바에서 항목 선택하면 해당 설명으로 스크롤 이동합니다.",
+  "groups": [
+    {
+      "sectionId": "section-bokmu",
+      "title": "복무·근무상황 관련",
+      "docs": [
+        {
+          "id": "doc-bokmu-flow",
+          "title": "복무 처리 기본 흐름",
+          "blocks": [
+            { "type": "p", "text": "사전 신청이 원칙. 어쩌고 저쩌고 설명 계속 ~~~" },
+            { "type": "ul", "items": ["설명 1", "설명 2", "설명 3", "설명 4"] }
+          ]
+        },
+        {
+          "id": "doc-bokmu-yeonga",
+          "title": "교육공무직 재량휴업일 복무 처리 방법",
+          "blocks": [{ "type": "p", "text": "관련 설명 쭉쭉쭉~~" }]
+        },
+        {
+          "id": "doc-bokmu-byeongga",
+          "title": "조리종사원 산업안전보건교육 복무 처리 방법",
+          "blocks": [{ "type": "p", "text": "관련 문서 번호, 업무 편람 등 설명 ~~~" }]
+        }
+      ]
+    },
+    {
+      "sectionId": "section-gyeoyak",
+      "title": "카테고리 2",
+      "docs": [
+        {
+          "id": "doc-gyeoyak-overview",
+          "title": "항목 2-1",
+          "blocks": [{ "type": "p", "text": "대충 설명 쭉~~" }]
+        },
+        {
+          "id": "doc-gyeoyak-flow",
+          "title": "항목 2-2",
+          "blocks": [{ "type": "p", "text": "설명." }]
+        }
+      ]
+    },
+    {
+      "sectionId": "section-yeobi",
+      "title": "카테고리 3",
+      "docs": [
+        {
+          "id": "doc-yeobi-gwannae",
+          "title": "항목 3-1",
+          "blocks": [{ "type": "p", "text": "설명" }]
+        },
+        {
+          "id": "doc-yeobi-gwanoe",
+          "title": "항목 3-2",
+          "blocks": [{ "type": "p", "text": "설명." }]
+        }
+      ]
+    }
+  ]
+}
