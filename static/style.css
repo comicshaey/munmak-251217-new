@@ -83,6 +83,12 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
+}
+
+/* 제목 영역 */
+.site-title-area {
+  min-width: 0;
 }
 
 .site-title {
@@ -90,27 +96,64 @@ a:hover {
   font-size: 1.75em;
   line-height: 1.2;
   font-weight: 700;
+  margin: 0;
 }
 
+.site-subtitle {
+  margin: 6px 0 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* 네비 */
 .site-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 토글 버튼(모바일용) */
+.nav-toggle {
+  display: none;
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: 999px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.nav-toggle:hover {
+  background: var(--primary-soft);
+}
+
+/* 메뉴 리스트 */
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
 }
 
-.site-nav a {
+.nav-list a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 6px 12px;
   border-radius: 999px;
   font-size: 1rem;
   border: 1px solid transparent;
 }
 
-.site-nav a:hover {
+.nav-list a:hover {
   background: var(--primary-soft);
   border-color: var(--primary);
+  text-decoration: none;
 }
 
-.site-nav a.is-active {
+.nav-list a.is-active {
   background: var(--primary);
   border-color: var(--primary);
 }
@@ -128,14 +171,20 @@ a:hover {
     font-size: 1.5em;
   }
 
-  .site-nav {
-    width: 100%;
-    justify-content: center;
+  /* 모바일에서 메뉴는 토글로 */
+  .nav-toggle {
+    display: inline-flex;
   }
 
-  .site-nav a {
-    display: inline-flex;
+  .nav-list {
+    width: 100%;
+    display: none;
     justify-content: center;
+    gap: 8px;
+  }
+
+  .site-nav.is-open .nav-list {
+    display: flex;
   }
 }
 
@@ -155,13 +204,107 @@ a:hover {
 .page-title {
   font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 6px;
+  margin: 0 0 6px;
 }
 
 .page-subtitle {
   font-size: 1rem;
   color: var(--text-muted);
-  margin-bottom: 20px;
+  margin: 0 0 20px;
+}
+
+/* ============================
+   공통 카드
+   ============================ */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+  border-radius: 16px;
+  padding: 18px;
+  margin-bottom: 16px;
+}
+
+.card h2 {
+  margin: 0 0 10px;
+  font-size: 1.15rem;
+}
+
+.card p {
+  margin: 0 0 10px;
+}
+
+.muted {
+  color: var(--text-muted);
+}
+
+.is-hidden {
+  display: none !important;
+}
+
+/* 링크 카드 그리드 */
+.link-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.link-card {
+  display: block;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: #fff;
+  transition: transform .08s ease, box-shadow .08s ease;
+}
+
+.link-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+  text-decoration: none;
+}
+
+.link-card strong {
+  display: block;
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.link-card span {
+  display: block;
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* 단계/목록 */
+.step-list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.step-list li {
+  margin-bottom: 10px;
+}
+
+.bullet-list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.bullet-list li {
+  margin-bottom: 6px;
+}
+
+.info-text {
+  margin-top: 12px;
+  color: #333;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 12px 14px;
 }
 
 /* ============================
@@ -215,7 +358,7 @@ a:hover {
   padding: 6px 10px;
   border-radius: 999px;
   font-size: 0.85rem;
-  background: var(--primary);   /* 홈 버튼 활성화 색 */
+  background: var(--primary);
   color: #222;
   margin-bottom: 10px;
 }
@@ -239,7 +382,7 @@ a:hover {
 }
 
 /* ============================
-   ✅ docs-portal (업무가이드) 레이아웃 추가
+   ✅ docs-portal (업무가이드) 레이아웃
    ============================ */
 .docs-layout {
   display: grid;
@@ -255,7 +398,6 @@ a:hover {
   border-radius: 16px;
   padding: 14px;
 
-  /* 헤더 sticky + page-wrap padding 고려한 값 */
   position: sticky;
   top: 82px;
   max-height: calc(100vh - 98px);
@@ -268,10 +410,10 @@ a:hover {
   box-shadow: var(--shadow-soft);
   border-radius: 16px;
   padding: 18px;
-  min-width: 0; /* 긴 글/표가 있을 때 레이아웃 깨짐 방지 */
+  min-width: 0;
 }
 
-/* 사이드바 내부(렌더링되는 링크/섹션) 기본 세팅 */
+/* 사이드바 내부 링크 */
 .docs-sidebar a {
   display: block;
   padding: 10px 10px;
@@ -289,7 +431,7 @@ a:hover {
   font-weight: 700;
 }
 
-/* 모바일에서는 사이드바를 위로 올리고 1열로 */
+/* 모바일 */
 @media (max-width: 900px) {
   .docs-layout {
     grid-template-columns: 1fr;
@@ -319,7 +461,7 @@ a:hover {
   box-shadow: var(--shadow-soft);
   cursor: pointer;
 
-  display: none; /* JS로 보여주기 */
+  display: none;
   align-items: center;
   justify-content: center;
 
