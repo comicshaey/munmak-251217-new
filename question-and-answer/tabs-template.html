@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>[탭 문서 제목]</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="layout-page">
+    <header class="site-header">
+      <div class="site-header-inner">
+        <div class="site-title">고주무관의 교직원을 위한 행정업무 안내 사이트</div>
+        <nav class="site-nav">
+          <a href="/">홈</a>
+          <a href="/docs-portal.html">업무 가이드</a>
+          <a href="/faq.html">자주 묻는 질문</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="page-wrap">
+        <h1 class="page-title">[페이지 타이틀]</h1>
+        <p class="page-subtitle">[페이지 설명]</p>
+
+        <div class="tabs-root" data-tabs-root>
+          <div class="tabs-list">
+            <button type="button" class="tab-button is-active" data-tab-target="overview">개요</button>
+            <button type="button" class="tab-button" data-tab-target="steps">절차</button>
+            <button type="button" class="tab-button" data-tab-target="examples">예시</button>
+            <button type="button" class="tab-button" data-tab-target="qa">Q&A</button>
+          </div>
+
+          <div class="tab-panel is-active" data-tab-panel="overview">
+            <p>[개요 작성]</p>
+          </div>
+
+          <div class="tab-panel" data-tab-panel="steps">
+            <ol>
+              <li>[1단계]</li>
+              <li>[2단계]</li>
+            </ol>
+          </div>
+
+          <div class="tab-panel" data-tab-panel="examples">
+            <p>[예시 작성]</p>
+          </div>
+
+          <div class="tab-panel" data-tab-panel="qa">
+            <ul>
+              <li>Q. [질문] / A. [답변]</li>
+            </ul>
+          </div>
+        </div>
+
+        <div data-author-note></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner" data-global-footer></div>
+    </footer>
+  </div>
+
+  <button id="scrollTopBtn" aria-label="위로 가기">↑</button>
+<script src="/static/site-common.js"></script>
+<script src="/static/ui-common.js"></script>
+
+</body>
+</html>

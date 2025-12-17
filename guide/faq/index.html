@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FAQ 이동 안내</title>
+  <meta http-equiv="refresh" content="0; url=/faq/" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+
+<body>
+  <div class="layout-page">
+
+    <header class="site-header">
+      <div class="site-header-inner">
+        <div class="site-title-area">
+          <h1 class="site-title">귀여운 고주무관의 교직원용 업무보조 웹사이트 (비공식)</h1>
+          <p class="site-subtitle">안내</p>
+        </div>
+
+        <nav class="site-nav" id="siteNav">
+          <button class="nav-toggle" type="button" aria-label="메뉴 열기/닫기" id="navToggle">메뉴</button>
+          <ul class="nav-list">
+            <li><a href="/">홈</a></li>
+            <li><a href="/guide/">업무 가이드</a></li>
+            <li><a href="/guide/encyclopedia/">업무 백과사전</a></li>
+            <li><a href="/guide/checklist/">체크리스트</a></li>
+            <li><a href="/guide/contract/">공무직·늘봄</a></li>
+            <li><a href="/guide/forms/">서식 도움</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="page-wrap">
+        <section class="card">
+          <h2>페이지 이동</h2>
+          <p class="page-subtitle">FAQ 주소가 변경되었습니다. 자동으로 이동합니다.</p>
+          <p style="margin:0;">
+            이동이 안 되면 <a href="/faq/"><strong>여기</strong></a>를 눌러주세요.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        제작자: 씩씩하고 귀여운 고주무관 · Contact: edusproutcmomics@naver.com ·
+        학교 공식 홈페이지가 아닌, 개인적인 토이 프로젝트입니다.
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      const nav = document.getElementById("siteNav");
+      const btn = document.getElementById("navToggle");
+      if (!nav || !btn) return;
+      btn.addEventListener("click", () => nav.classList.toggle("is-open"));
+    })();
+  </script>
+</body>
+</html>

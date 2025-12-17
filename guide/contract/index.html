@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>계약 업무 안내</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+
+<body>
+  <div class="layout-page">
+
+    <header class="site-header">
+      <div class="site-header-inner">
+        <div class="site-title-area">
+          <h1 class="site-title">귀여운 고주무관의 교직원용 업무보조 웹사이트 (비공식)</h1>
+          <p class="site-subtitle">계약 업무 관련하여 안내하는 페이지입니다.</p>
+        </div>
+
+        <nav class="site-nav" id="siteNav">
+          <button class="nav-toggle" type="button" aria-label="메뉴 열기/닫기" id="navToggle">메뉴</button>
+          <ul class="nav-list">
+            <li><a href="/">홈</a></li>
+            <li><a href="/guide/">업무 가이드</a></li>
+            <li><a href="/guide/encyclopedia/">업무 백과사전</a></li>
+            <li><a href="/guide/checklist/">체크리스트</a></li>
+            <li><a href="/guide/contract/" class="is-active">계약 업무 안내</a></li>
+            <li><a href="/guide/forms/">서식 도움</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="page-wrap">
+
+        <section class="card">
+          <h2>늘봄학교 외부강사 개인 위·수탁 계약</h2>
+          <ul class="bullet-list">
+            <li>위수탁 계약은 강사료에 대한 대가를 지급하는 계약입니다. 근로계약과는 다른 계약입니다.</li>
+            <li>행정실에서 계약서(안) 내용 검토는 가능하나, 원칙적으로 사업부서에서 계약서(안) 작성을 하셔야 합니다.</li>
+            <li>채용 요구 및 계약 체결 없이 강사를 무단으로 사용하지 말아주십시오. </li>
+            <li> 기타 등등 추가 </li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>계약서(안) 내용 확인 사항</h2>
+          <ul class="bullet-list">
+            <li>위수탁 계약 기간과 늘봄학교 운영 기간 용어를 분명히 구분하여 주십시오.</li>
+            <li>기타 내용 ~~</li>
+            <li>기타 내용 ~~</li>
+          </ul>
+          <p class="info-text">
+            채용 계획이 있는 경우 행정실에 반드시 일정 공유 바랍니다. 
+          </p>
+        </section>
+
+        <section class="card dev-note is-hidden" id="devNote">
+          <h2>개발자 메모</h2>
+          <p class="muted">내용 보완</p>
+        </section>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        제작자: 씩씩하고 귀여운 고주무관 · Contact: edusproutcmomics@naver.com ·
+        학교 공식 홈페이지가 아닌, 개인적인 토이 프로젝트입니다.
+      </div>
+    </footer>
+
+    <button id="scrollTopBtn" type="button" aria-label="위로 가기">↑</button>
+  </div>
+
+  <script>
+    (function () {
+      const nav = document.getElementById("siteNav");
+      const btn = document.getElementById("navToggle");
+      if (!nav || !btn) return;
+      btn.addEventListener("click", () => nav.classList.toggle("is-open"));
+    })();
+
+    (function () {
+      const btn = document.getElementById("scrollTopBtn");
+      if (!btn) return;
+
+      const onScroll = () => {
+        btn.style.display = window.scrollY > 300 ? "inline-flex" : "none";
+      };
+
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+
+      btn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>업무 가이드</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+
+<body>
+  <div class="layout-page">
+    <header class="site-header">
+      <div class="site-header-inner">
+        <div class="site-title-area">
+          <h1 class="site-title">귀여운 고주무관의 교직원용 업무보조 웹사이트 (비공식)</h1>
+          <p class="site-subtitle">행정 업무 전반에 대한 가이드북입니다.</p>
+        </div>
+
+        <nav class="site-nav" id="siteNav">
+          <button class="nav-toggle" type="button" aria-label="메뉴 열기/닫기" id="navToggle">메뉴</button>
+          <ul class="nav-list" id="navList">
+            <li><a href="/">홈</a></li>
+            <li><a href="/guide/" class="is-active">업무 가이드</a></li>
+            <li><a href="/guide/faq/">FAQ</a></li>
+            <li><a href="/calendar/">연간 일정</a></li>
+            <li><a href="/guide/contract/">계약 업무 안내</a></li>
+            <li><a href="/guide/checklist/">체크리스트</a></li>
+            <li><a href="/guide/forms/">서식 도움</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="page-wrap">
+        <section class="card">
+          <h2>행정업무 가이드북</h2>
+          <p>
+            자주 문의하시는 내용이나 업무 처리 시 착오가 많은 부분에 대해 정리했습니다. <br/>
+           업무 별로 상세페이지를 확인해 주십시오.
+          </p>
+
+          <div class="link-grid">
+            <a class="link-card" href="/guide/checklist/">
+              <strong>체크리스트</strong>
+              <span>업무 처리 시 반드시 확인해야 하는 목록</span>
+            </a>
+            <a class="link-card" href="/guide/contract/">
+              <strong>계약 업무 안내</strong>
+              <span>근로계약 및 위수탁계약 관련 안내</span>
+            </a>
+            <a class="link-card" href="/guide/forms/">
+              <strong>서식 도움</strong>
+              <span>강사활동 확인서 등 양식 필요한 경우</span>
+            </a>
+            <a class="link-card" href="/guide/faq/">
+              <strong>FAQ</strong>
+              <span>자주 묻는 질문 모음</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>가이드북 사용 안내</h2>
+          <ol class="step-list">
+            <li>
+              <strong>(나중에 작성)</strong><br />
+              (나중에 작성)
+            </li>
+            <li>
+              <strong>(나중에 작성)</strong><br />
+              (나중에 작성)
+            </li>
+            <li>
+              <strong>(나중에 작성)</strong><br />
+              (나중에 작성)
+            </li>
+            <li>
+              (나중에 작성)
+            </li>
+          </ol>
+        </section>
+
+        <section class="card">
+          <h2>행정실과 사전 협의가 꼭 필요한 업무</h2>
+          <ul class="bullet-list">
+            <li>예산을 사용하는 모든 활동 (물품 구입, 용역 계약, 강사비 지급 등)</li>
+            <li>채용 및 계약 체결 예정인 경우</li>
+            <li>출장·연수 등 여비가 발생하는 경우</li>
+            <li>수익자부담금이 발생하는 경우 등</li>
+            <li>(나중에 작성)</li>
+          </ul>
+
+          <p class="info-text">
+            사후 통보 방식이 돼서 정당한 업무 절차대로 처리하지 못하는 경우가 발생하지 않도록 숙지 및 협조 부탁드립니다. 
+          </p>
+        </section>
+
+        <section class="card dev-note is-hidden" id="devNote">
+          <h2>개발자 메모</h2>
+          <div class="dev-note-body">
+            <p class="muted">
+              졸라 귀찮다
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        제작자: 씩씩하고 귀여운 고주무관 · Contact: edusproutcmomics@naver.com · 학교 공식 홈페이지가 아닌, 개인적인 토이 프로젝트입니다.
+      </div>
+    </footer>
+
+    <button id="scrollTopBtn" type="button" aria-label="위로 가기">↑</button>
+  </div>
+
+  <script>
+    // 모바일 메뉴 토글
+    (function () {
+      const nav = document.getElementById("siteNav");
+      const btn = document.getElementById("navToggle");
+      if (!nav || !btn) return;
+
+      btn.addEventListener("click", () => {
+        nav.classList.toggle("is-open");
+      });
+    })();
+
+    // 위로가기 버튼
+    (function () {
+      const btn = document.getElementById("scrollTopBtn");
+      if (!btn) return;
+
+      const onScroll = () => {
+        if (window.scrollY > 300) btn.style.display = "inline-flex";
+        else btn.style.display = "none";
+      };
+
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+
+      btn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    })();
+  </script>
+</body>
+</html>

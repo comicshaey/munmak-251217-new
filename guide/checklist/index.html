@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>필수 체크리스트</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+
+<body>
+  <div class="layout-page">
+
+    <!-- ✅ 공통 헤더 -->
+    <header class="site-header">
+      <div class="site-header-inner">
+        <div class="site-title-area">
+          <h1 class="site-title">귀여운 고주무관의 교직원용 업무보조 웹사이트 (비공식)</h1>
+          <p class="site-subtitle">업무 처리 시 놓치기 쉬운 내용에 대해 정리합니다.</p>
+        </div>
+
+        <nav class="site-nav" id="siteNav">
+          <button class="nav-toggle" type="button" aria-label="메뉴 열기/닫기" id="navToggle">메뉴</button>
+          <ul class="nav-list">
+            <li><a href="/">홈</a></li>
+            <li><a href="/guide/">업무 가이드</a></li>
+            <li><a href="/guide/encyclopedia/">업무 백과사전</a></li>
+            <li><a href="/guide/checklist/" class="is-active">체크리스트</a></li>
+            <li><a href="/guide/contract/">계약 업무 안내</a></li>
+            <li><a href="/guide/forms/">서식 도움</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ✅ 본문 -->
+    <main class="main-content">
+      <div class="page-wrap">
+
+        <section class="card">
+          <h2>업무 중 필수 체크리스트</h2>
+          <p>
+            업무 처리 시 놓치기 쉬운 내용에 대해 정리합니다.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>예시) 외부강사 인건비 지급 관련 확인 사항</h2>
+          <ul class="bullet-list">
+            <li>행정실에 사업 계획 및 방문 일정, 강사 정보 공유하셨나요?</li>
+            <li>강사 개인에게 급여를 지급하는지, 업체를 통해 위탁한 강사가 방문하는 지 확인하셨나요? <br/>
+→업체 위탁일 경우 반드시 강사료 견적서를 사전에 전달하여 주십시오.</li>
+            <li>강사에게 범죄경력 조회 요청하시라고 안내하셨습니까?</li>
+            <li>사업 진행 전, 사전에 강사료 품의 요청을 하셨습니까?</li>
+            <li>기타 구비 서류: </li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>예시) 초과근무 증빙 관련 확인 사항</h2>
+          <ul class="bullet-list">
+            <li>사전에 초과근무 결재를 받으셨습니까? → "아니오"인 경우 실근무 인정 근거가 없습니다.</li>
+            <li>교내 근무입니까, 학교 밖에서 근무하십니까?</li>
+            <li>학교 내 초과근무: 지문으로 증빙합니다.</li>
+            <li>학교 밖에서 초과근무를 한 경우: 확인 수기대장에 기재하여 증빙합니다.</li>
+          </ul>
+        </section>
+
+        <!-- 내부 메모 -->
+        <section class="card dev-note is-hidden" id="devNote">
+          <h2>개발자용 메모</h2>
+          <p class="muted">
+            실제 사고 사례가 생길 때마다 이 체크리스트에 한 줄씩 보강.
+          </p>
+        </section>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        제작자: 씩씩하고 귀여운 고주무관 · Contact: edusproutcmomics@naver.com ·
+        학교 공식 홈페이지가 아닌, 개인적인 토이 프로젝트입니다.
+      </div>
+    </footer>
+
+    <button id="scrollTopBtn" type="button" aria-label="위로 가기">↑</button>
+  </div>
+
+  <!-- 공통 스크립트 -->
+  <script>
+    // 모바일 메뉴 토글
+    (function () {
+      const nav = document.getElementById("siteNav");
+      const btn = document.getElementById("navToggle");
+      if (!nav || !btn) return;
+      btn.addEventListener("click", () => {
+        nav.classList.toggle("is-open");
+      });
+    })();
+
+    // 위로가기 버튼
+    (function () {
+      const btn = document.getElementById("scrollTopBtn");
+      if (!btn) return;
+
+      const onScroll = () => {
+        btn.style.display = window.scrollY > 300 ? "inline-flex" : "none";
+      };
+
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+
+      btn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    })();
+  </script>
+</body>
+</html>

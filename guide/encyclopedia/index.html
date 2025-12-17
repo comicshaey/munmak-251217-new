@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>업무 백과사전</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+
+<body>
+  <div class="layout-page">
+
+    <header class="site-header">
+      <div class="site-header-inner">
+        <div class="site-title-area">
+          <h1 class="site-title">귀여운 고주무관의 교직원용 업무보조 웹사이트 (비공식)</h1>
+          <p class="site-subtitle">업무 백과사전</p>
+        </div>
+
+        <nav class="site-nav" id="siteNav">
+          <button class="nav-toggle" type="button" aria-label="메뉴 열기/닫기" id="navToggle">메뉴</button>
+          <ul class="nav-list">
+            <li><a href="/">홈</a></li>
+            <li><a href="/guide/">업무 가이드</a></li>
+            <li><a href="/guide/encyclopedia/" class="is-active">업무 백과사전</a></li>
+            <li><a href="/guide/checklist/">체크리스트</a></li>
+            <li><a href="/guide/contract/">계약 업무 안내</a></li>
+            <li><a href="/guide/forms/">서식 도움</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="page-wrap">
+
+        <div class="docs-layout">
+          <!-- 왼쪽 사이드바 -->
+          <aside class="docs-sidebar" id="docsSidebar">
+            <!-- JS로 렌더링 -->
+          </aside>
+
+          <!-- 오른쪽 본문 -->
+          <section class="docs-content" id="docsContent">
+            <p class="muted">왼쪽에서 항목을 선택하세요.</p>
+          </section>
+        </div>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        제작자: 씩씩하고 귀여운 고주무관 · Contact: edusproutcmomics@naver.com ·
+        학교 공식 홈페이지가 아닌, 개인적인 토이 프로젝트입니다.
+      </div>
+    </footer>
+
+    <button id="scrollTopBtn" type="button" aria-label="위로 가기">↑</button>
+  </div>
+
+<script src="/static/site-common.js"></script>
+<script src="/static/ui-common.js"></script>
+<script src="/static/render-docs.js"></script>
+  <script>
+    (function () {
+      const nav = document.getElementById("siteNav");
+      const btn = document.getElementById("navToggle");
+      if (!nav || !btn) return;
+      btn.addEventListener("click", () => nav.classList.toggle("is-open"));
+    })();
+
+    (function () {
+      const btn = document.getElementById("scrollTopBtn");
+      if (!btn) return;
+      const onScroll = () => {
+        btn.style.display = window.scrollY > 300 ? "inline-flex" : "none";
+      };
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+      btn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    })();
+  </script>
+</body>
+</html>
